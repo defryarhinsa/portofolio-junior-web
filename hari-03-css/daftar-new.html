@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Hero Banner -->
+    <section class="form-hero">
+        <h1>Formulir Pendaftaran</h1>
+        <p>Isi data di bawah untuk mendaftar program Junior Web Programmer</p>
+    </section>
+
+    <!-- Form Card -->
+    <div class="form-wrapper">
+        <form action="proses.php" method="post" enctype="multipart/form-data">
+
+            <!-- Fieldset 1: Data Diri -->
+            <fieldset>
+                <legend>Data Diri</legend>
+
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" required
+                           minlength="3" maxlength="60"
+                           placeholder="Masukkan nama lengkap">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required
+                           placeholder="nama@contoh.com">
+                </div>
+
+                <div class="form-group">
+                    <label for="hp">No. HP</label>
+                    <input type="tel" id="hp" name="hp" required
+                           pattern="08[0-9]{8,11}"
+                           placeholder="08xxxxxxxxxx">
+                    <small>Awali dengan 08, minimal 10 digit</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="lahir">Tanggal Lahir</label>
+                    <input type="date" id="lahir" name="lahir" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Jenis Kelamin</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="jk" value="L" required>
+                            Laki-laki
+                        </label>
+                        <label>
+                            <input type="radio" name="jk" value="P">
+                            Perempuan
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- Fieldset 2: Pilihan Kelas -->
+            <fieldset>
+                <legend>Pilihan Kelas</legend>
+
+                <div class="form-group">
+                    <label for="kelas">Kelas</label>
+                    <select id="kelas" name="kelas" required>
+                        <option value="">-- Pilih kelas --</option>
+                        <option value="web">Web Programming</option>
+                        <option value="data">Data Dasar</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Minat</label>
+                    <div class="checkbox-group">
+                        <label>
+                            <input type="checkbox" name="minat[]" value="frontend">
+                            Frontend
+                        </label>
+                        <label>
+                            <input type="checkbox" name="minat[]" value="backend">
+                            Backend
+                        </label>
+                        <label>
+                            <input type="checkbox" name="minat[]" value="fullstack">
+                            Fullstack
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <textarea id="alamat" name="alamat" rows="3"
+                              maxlength="200"
+                              placeholder="Masukkan alamat lengkap"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="foto">Upload Foto (JPG/PNG)</label>
+                    <input type="file" id="foto" name="foto"
+                           accept=".jpg,.jpeg,.png">
+                    <small>Maksimal 2MB, format JPG atau PNG</small>
+                </div>
+            </fieldset>
+
+            <!-- Agreement -->
+            <div class="agreement">
+                <input type="checkbox" id="setuju" name="setuju" required>
+                <label for="setuju">Saya menyatakan bahwa data yang saya isi adalah benar
+                    dan dapat dipertanggungjawabkan.</label>
+            </div>
+
+            <!-- Buttons -->
+            <div class="form-actions">
+                <button type="submit" class="btn-submit">Daftar Sekarang</button>
+                <button type="reset" class="btn-reset">Atur Ulang</button>
+            </div>
+
+        </form>
+    </div>
+
+</body>
+</html>
