@@ -1,0 +1,16 @@
+[
+    {
+        "nama": "Rudi Tabuti",
+        "email": "ruditabuti123@gmail.com",
+        "pesan": "halo",
+        "id": 1,
+        "waktu": "2026-10-28 09:51:13"
+    },
+    {
+        "nama": "Andre Taulany",
+        "email": "andre@andre.com",
+        "pesan": "wowo",
+        "id": 2,
+        "waktu": "2026-10-28 09:59:42"
+    }
+]
